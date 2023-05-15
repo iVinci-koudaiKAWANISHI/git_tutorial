@@ -8,6 +8,7 @@ public class Prob3_7 {
             System.out.println("5以上です。");
 
         }else{
+            System.out.println("数値 : " + num);
             System.out.println("5未満です");
         }   
         

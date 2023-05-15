@@ -13,7 +13,7 @@ public class Prob3_15 {
             System.out.println("可");
 
 
-        }else {
+        }else if(num < 60){
             System.out.println("点数 : " + num);
             System.out.println("不可");
         }   
