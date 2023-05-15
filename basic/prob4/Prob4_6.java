@@ -6,20 +6,6 @@ public class Prob4_6 {
         while(a >= 0){
             System.out.println("a = " + a);
             a--;
-
         }
-        /*int a = 3;
-        int i = 0;
-        while(i < 4){
-            
-            System.out.println("a = " + a);
-            if(a==0)
-            break;
-            a--;
-            
-            
-            
-        }*/
- 
     }
 }

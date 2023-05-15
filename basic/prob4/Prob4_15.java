@@ -7,7 +7,5 @@ public class Prob4_15 {
             if(i %10 == 0)
             System.out.println();
         }
-
-
     }
 }
