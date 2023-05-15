@@ -7,8 +7,11 @@ public class Prob4_9 {
         while(true){
             int a = (int)(Math.random()*100)+1;
             System.out.println(a);
-            if(a % 10 ==0)
-            break;  
+            if(a % 10 ==0){
+                System.out.println("終了します");
+                break;
+            }
+              
         }
  
     }
