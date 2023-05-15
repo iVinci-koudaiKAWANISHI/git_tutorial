@@ -8,11 +8,9 @@ public class Prob3_4 {
 		int max = 100;
 		Random random = new Random();
 		int value = random.nextInt(max) + min;
-        if(value < 10 || value > 90){
-            System.out.println(value);
+        System.out.println(value);
+        if(value < 10 || value > 90){  
             System.out.println("10以下か90以上の値です。");
-        }else{
-            System.out.println(value);
         }
     }
 }
