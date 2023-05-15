@@ -7,13 +7,13 @@ public class Prob4_14 {
             int num = (int)(Math.random()*10)+1; 
             
             if(num % 2 == 0){
-                
-                System.out.println("★★★★");
-               
-            }else{
-                
-                System.out.println("☆☆☆☆☆☆☆");
-
+                for(int i = 0; i < num ; i++){
+                    System.out.print("★");
+                }  
+            }else{   
+                for(int i = 0; i < num ; i++){
+                    System.out.print("☆");
+                }
             } 
                 
               
