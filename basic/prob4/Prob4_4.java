@@ -7,12 +7,5 @@ public class Prob4_4 {
             System.out.println("a = " + a);
             a++;
         }
-
-        /*int a = 0;
-        do{
-            System.out.println("a = " + a);
-            a++;
-        }while(a < 4);*/
- 
     }
 }
