@@ -6,11 +6,8 @@ public class Prob3_6 {
         if(num >= 3){
             System.out.println("数値 : " + num);
             System.out.println("３以上です。");
-
         }else{
             System.out.println("数値 : " + num);
         }   
-        
- 
     }
 }
