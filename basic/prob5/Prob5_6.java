@@ -27,6 +27,6 @@ public class Prob5_6 {
         for(int i = 0; i < data.length; i++){
             sum += data[i];
         }
-        System.out.println(sum/10);
+        System.out.println(sum/data.length);
     }
 }
