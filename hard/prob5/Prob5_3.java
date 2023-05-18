@@ -13,14 +13,17 @@ public class Prob5_3 {
             break;
         }
         System.out.println();
-        for(int i = 0;i < 10;i++){
-            System.out.print("一の位が" + i + ":");
-            for(int j = 0; j < data.size(); j++){
-                if(data.get(j) % 10 == i){
-                    System.out.print(j);
-                    System.out.println();
+        for(int i = 0; i < 10; i++){
+            String result = "";
+            for(int j : data){
+                if(j % 10 == i){
+                    result += " " + j ;
                 }
             }
+            if(result.equals("")){
+                result = "なし";
+            }
+            System.out.println("一の位が" + i + "：" + result );
         }
     }
 }
