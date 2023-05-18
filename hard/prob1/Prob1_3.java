@@ -8,13 +8,12 @@ public class Prob1_3 {
         System.out.println("よこ：" + b);
         square(a,b);
     }
-    private static int square(int a, int b) {
-        for(int i = 0; i < a; i++){
-            for(int j = 0; j < b; j++){
+    private static void square(int tate, int yoko) {
+        for(int i = 0; i < tate; i++){
+            for(int j = 0; j < yoko; j++){
                 System.out.print("■");
             }
             System.out.println();
         }
-        return a * b;
     }
 }
