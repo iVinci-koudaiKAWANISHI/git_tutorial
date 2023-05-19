@@ -10,7 +10,4 @@ public class PersonalComputer extends Computer{
     public void output(){
         System.out.println("ディスプレイに出力");
     }
-    public void communication() {
-        System.out.println("インターネットで通信");
-    }
 }

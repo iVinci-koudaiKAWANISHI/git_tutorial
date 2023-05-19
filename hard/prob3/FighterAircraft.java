@@ -1,7 +1,6 @@
 package hard.prob3;
 
-public class FighterAiracraft extends AirPlane{
-    String type = "戦闘機";
+public class FighterAircraft extends AirPlane{
     public void fly() {
         System.out.println("攻撃に出るために飛行します。");
     }

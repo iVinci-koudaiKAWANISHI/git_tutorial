@@ -10,7 +10,4 @@ public class TabletPC extends Computer{
     public void output(){
         System.out.println("タッチパネルディスプレイに出力");
     }
-    public void communication() {
-        System.out.println("インターネットで通信");
-    }
 }
