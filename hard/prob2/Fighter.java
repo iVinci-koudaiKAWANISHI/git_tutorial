@@ -1,9 +1,6 @@
 package hard.prob2;
 
-public class Fighter {
-    public void fly() {
-        System.out.println("飛行する");
-    }
+public class Fighter extends Airplane{
     public void fight() {
         System.out.println("戦闘する");
     }
