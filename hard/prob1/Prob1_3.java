@@ -8,9 +8,9 @@ public class Prob1_3 {
         System.out.println("よこ：" + b);
         square(a,b);
     }
-    private static void square(int tate, int yoko) {
-        for(int i = 0; i < tate; i++){
-            for(int j = 0; j < yoko; j++){
+    private static void square(int row, int column) {
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < column; j++){
                 System.out.print("■");
             }
             System.out.println();
