@@ -10,12 +10,12 @@ public class Prob1_2 {
         System.out.println("b = " + b);
         System.out.print("c = ");
         Scanner scanner = new Scanner(System.in);
-        int c = scanner.nextInt();    
-        int result = mull(mull(a,b),c);   
+        int c = scanner.nextInt();
+        int result = mul(a,b,c);   
         System.out.println(a + " * " + b + " * " + c + " = " + result);
         scanner.close();
     }
-    static int mull(int mull_1,int mull_2){
-        return mull_1 * mull_2;
+    private static int mul(int mul1, int mul2,int mul3) {
+        return mul1 * mul2 * mul3;
     }
 } 
