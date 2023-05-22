@@ -9,6 +9,7 @@ public class Prob5_1{
         for(int i = 0; i < a.length; i++){
             a[i] = random.nextInt(10)+1;
             System.out.print("a["+ i + "]=" + a[i]+" ");
-        }  
+        }
+        System.out.println();
     }  
 }
