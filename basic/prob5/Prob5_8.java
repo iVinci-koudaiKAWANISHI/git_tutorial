@@ -3,9 +3,9 @@ package basic.prob5;
 public class Prob5_8 {
     public static void main(String[] args){
         int[] data = new int[5];
-        int pn = 0;
-        int nn = 0;
-        int zr = 0;
+        int positiveNumber = 0;
+        int negativeNumber = 0;
+        int zero = 0;
         for(int i = 0; i < data.length; i++){
             int num = (int)(Math.random() * 21) - 10;
             data[i] = num;
@@ -16,23 +16,23 @@ public class Prob5_8 {
         System.out.print("0より大きい数：");
         for(int i = 0; i < data.length; i++){
            if(data[i] > 0){
-            pn++;
+            positiveNumber++;
            }
         }
-        System.out.println(pn + "個");
+        System.out.println(positiveNumber + "個");
         System.out.print("0より小さい数：");
         for(int i = 0; i < data.length; i++){
            if(data[i] < 0){
-            nn++;
+            negativeNumber++;
            }
         }
-        System.out.println(nn + "個");
+        System.out.println(negativeNumber + "個");
         System.out.print("0の個数：");
         for(int i = 0; i < data.length; i++){
            if(data[i] == 0){
-            zr++;
+            zero++;
            }
         }
-        System.out.println(zr + "個");
+        System.out.println(zero + "個");
     }
 }
