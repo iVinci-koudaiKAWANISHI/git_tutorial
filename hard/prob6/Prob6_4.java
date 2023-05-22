@@ -9,15 +9,16 @@ public class Prob6_4 {
     public static void main(String[] args) throws IOException{
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
-        HashSet<String> hashSet = new HashSet<String>();
+        HashSet<Character> hashSet = new HashSet<Character>();
         System.out.print("英単語を入力：");
         String buf = br.readLine();
         System.out.print("使用されているアルファベット：");
-        String[] str =  buf.split("");
-        for(String i : str){
-            hashSet.add(i);
-            System.out.print(i + " ");
+        char[] cArray =  buf.toCharArray();
+        for(char c : cArray){
+            hashSet.add(c);
         }
-        System.out.println();
+        for(char d : hashSet){
+            System.out.print(d + " ");
+        }
     }
 }
