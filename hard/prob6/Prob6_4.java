@@ -20,5 +20,6 @@ public class Prob6_4 {
         for(char d : hashSet){
             System.out.print(d + " ");
         }
+        System.out.println();
     }
 }

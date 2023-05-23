@@ -11,12 +11,16 @@ public class Prob6_1{
         BufferedReader br = new BufferedReader(isr);
         System.out.print("英語で動物の名前を入力してください：");
         HashMap<String,String> hashMap = new HashMap<String,String>();
-        hashMap.put("cat", "猫です。");
-        hashMap.put("dog", "犬です。");
-        hashMap.put("bird", "鳥です。");
-        hashMap.put("tiger", "トラです。");
+        hashMap.put("cat", "猫");
+        hashMap.put("dog", "犬");
+        hashMap.put("bird", "鳥");
+        hashMap.put("tiger", "トラ");
         String buf = br.readLine();
-        String str = hashMap.getOrDefault(buf,"対応するデータは登録されていません。");            
-        System.out.print(str);
+        if(hashMap.containsKey(buf)){
+            System.out.println("「" +hashMap.get(buf)+ "」" + "です。");
+        }else{
+            String str = hashMap.getOrDefault(buf,"対応するデータは登録されていません。");           
+            System.out.println(str);
+        }
     }
 }
