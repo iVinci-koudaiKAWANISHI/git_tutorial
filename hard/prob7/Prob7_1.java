@@ -8,6 +8,7 @@ public class Prob7_1{
             }catch(ArrayIndexOutOfBoundsException e){
                 System.out.println("配列の範囲を超えています。");
             }
-        }       
+        }
+        System.out.println();       
     }
 }
