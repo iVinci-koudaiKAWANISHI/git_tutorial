@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.NumberFormat;
 import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Prob6_2 {
     public static void main(String[] args) throws IOException{
@@ -25,17 +23,21 @@ public class Prob6_2 {
         hashMap.put("9", "九");
         hashMap.put("0", "〇");
         String buf = br.readLine();
-        Pattern pattern = Pattern.compile("[0-9]");
-        Matcher matcher = pattern.matcher(buf);
-        if(! matcher.find()){
-            System.out.println("整数の値を入力してください。"); 
-        }
-        NumberFormat nf = NumberFormat.getInstance();
-        String[] strNum = nf.format(Integer.parseInt(buf)).split("");
-        String strKanji = "";
-        for (String s : strNum) {
-                strKanji += hashMap.getOrDefault(s, ",");
+        String[] strNum1 = buf.split("");
+        for(String i : strNum1){
+            if(!hashMap.containsKey(i)){
+                System.out.println("整数の値を入力してください。");
+                break;
+            }else{
+                NumberFormat nf = NumberFormat.getInstance();
+                String[] strNum = nf.format(Integer.parseInt(buf)).split("");
+                String strKanji = "";
+                for (String s : strNum) {
+                    strKanji += hashMap.getOrDefault(s, ",");
+                }
+                System.out.println(strKanji);
+                break;
             }
-        System.out.println(strKanji);
+        }
     }
 }

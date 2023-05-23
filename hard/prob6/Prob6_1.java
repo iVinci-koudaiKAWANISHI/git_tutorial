@@ -19,8 +19,7 @@ public class Prob6_1{
         if(hashMap.containsKey(buf)){
             System.out.println("「" +hashMap.get(buf)+ "」" + "です。");
         }else{
-            String str = hashMap.getOrDefault(buf,"対応するデータは登録されていません。");           
-            System.out.println(str);
+            System.out.println("対応するデータは登録されていません。");
         }
     }
 }
