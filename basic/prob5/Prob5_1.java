@@ -10,6 +10,6 @@ public class Prob5_1{
             a[i] = random.nextInt(10)+1;
             System.out.print("a["+ i + "]=" + a[i]+" ");           
         }
-        System.out.println(); 
+        System.out.println();  
     }  
 }
