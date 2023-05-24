@@ -5,9 +5,9 @@ import java.util.Random;
 public class Prob5_3 {
     public static void main(String[] args){
         int[] data = new int [10];
-        Random random = new Random();
+        Random r = new Random();
         for(int i = 0; i < data.length; i++){
-            data[i] = random.nextInt(100) + 1;
+            data[i] = r.nextInt(100) + 1;
             System.out.print(data[i] + " ");
         }
         System.out.println();

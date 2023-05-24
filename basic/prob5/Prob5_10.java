@@ -9,11 +9,11 @@ public class Prob5_10 {
             System.out.print(data[i] + " ");
         }
         System.out.println();
-        for(int num : data){         
+        for(int num : data){
+            System.out.println();
             for(int i = 0; i < num; i++){
                 System.out.print("*");
             }
-            System.out.println();        
         }
     }
 }

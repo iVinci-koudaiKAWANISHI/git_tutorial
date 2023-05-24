@@ -19,7 +19,7 @@ public class Prob5_7 {
         System.out.println(sum);
         System.out.print("平均値：");
         for(int i = 0; i < data.length; i++){
-            average = sum / data.length;
+            average = sum / 5;
         }
         System.out.println(average);
         System.out.println();
