@@ -22,5 +22,6 @@ public class Prob5_9 {
             System.out.print(data[i] + " ");
            }
         }
+        System.out.println(); 
     }
 }

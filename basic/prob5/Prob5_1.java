@@ -11,5 +11,5 @@ public class Prob5_1{
             System.out.print("a["+ i + "]=" + a[i]+" ");
         }
         System.out.println();
-    }  
+    } 
 }

@@ -31,7 +31,7 @@ public class Prob5_8 {
         for(int i = 0; i < data.length; i++){
            if(data[i] == 0){
             zero++;
-           }
+           } 
         }
         System.out.println(zero + "個");
     }

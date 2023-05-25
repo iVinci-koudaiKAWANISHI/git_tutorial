@@ -15,5 +15,6 @@ public class Prob5_10 {
                 System.out.print("*");
             }
         }
+        System.out.println(); 
     }
 }

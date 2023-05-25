@@ -32,4 +32,4 @@ public class Prob5_13 {
         System.out.print(min);
         System.out.println();
     }
-}
+} 

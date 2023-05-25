@@ -6,5 +6,6 @@ public class Prob5_2 {
         for(int i = 0; i < d.length; i++){
             System.out.print("d[" + i + "]=" +d[i]+" ");
         }
+        System.out.println();
     }
-}
+} 

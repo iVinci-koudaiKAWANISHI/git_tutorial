@@ -13,4 +13,4 @@ public class Prob5_12 {
         }
         System.out.println();
     }
-}
+} 

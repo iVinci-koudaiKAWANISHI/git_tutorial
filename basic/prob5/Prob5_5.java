@@ -23,5 +23,6 @@ public class Prob5_5 {
                 System.out.print(data[i] + " ");
             }
         }
-    }
+        System.out.println();
+    } 
 }

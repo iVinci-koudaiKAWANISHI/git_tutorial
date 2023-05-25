@@ -29,4 +29,4 @@ public class Prob5_6 {
         }
         System.out.println(sum/data.length);
     }
-}
+} 
