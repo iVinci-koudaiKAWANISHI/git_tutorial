@@ -24,20 +24,18 @@ public class Prob6_2 {
         hashMap.put("0", "〇");
         String buf = br.readLine();
         String[] strNum1 = buf.split("");
-        for(String i : strNum1){
-            if(!hashMap.containsKey(i)){
+        for(String str : strNum1){
+            if(!hashMap.containsKey(str)){
                 System.out.println("整数の値を入力してください。");
-                break;
-            }else{
-                NumberFormat nf = NumberFormat.getInstance();
-                String[] strNum = nf.format(Integer.parseInt(buf)).split("");
-                String strKanji = "";
-                for (String s : strNum) {
-                    strKanji += hashMap.getOrDefault(s, ",");
-                }
-                System.out.println(strKanji);
-                break;
+                System.exit(0);
             }
         }
+        NumberFormat nf = NumberFormat.getInstance();
+        String[] strNum = nf.format(Integer.parseInt(buf)).split("");
+        String strKanji = "";
+        for (String s : strNum) {
+            strKanji += hashMap.getOrDefault(s, ",");
+        }
+        System.out.println(strKanji);              
     }
 }
