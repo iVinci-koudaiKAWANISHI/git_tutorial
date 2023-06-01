@@ -5,21 +5,24 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        //input
-        //当選番号
-        int winningNumber = 242358;
-        // 年賀状番号
-        ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(295283,267358,242359));
-        for(int i = 0; i < newYearCards.size(); i++){
-            if(winningNumber == newYearCards.get(i)){
+        int winningNumber = 999999;
+        ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(1000000, 267358, 242359));
+        int last4Wining = winningNumber % 10000;
+        int last3Wining = winningNumber % 1000;
+        for (int newYearCard : newYearCards) {
+            // 2等賞用に下4桁抽出
+            int last4Card = newYearCard % 10000;
+            // 3等賞用に下3桁抽出
+            int last3Card = newYearCard % 1000;
+            if (winningNumber == newYearCard) {
                 System.out.println("一等賞");
-            }else if(winningNumber == newYearCards.get(i) + 1 || winningNumber == newYearCards.get(i) - 1){
+            } else if (winningNumber == newYearCard + 1 || winningNumber == newYearCard - 1) {
                 System.out.println("前後賞");
-            }else if((winningNumber - newYearCards.get(i)) % 10000 == 0){
+            } else if (last4Card == last4Wining) {
                 System.out.println("二等賞");
-            }else if((winningNumber - newYearCards.get(i)) % 1000 == 0){
+            } else if (last3Card == last3Wining) {
                 System.out.println("三等賞");
-            }else{
+            } else {
                 System.out.println("外れ");
             }
         }
