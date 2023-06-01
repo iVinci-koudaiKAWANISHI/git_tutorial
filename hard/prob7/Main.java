@@ -9,7 +9,7 @@ public class Main {
         //当選番号
         int winningNumber = 242358;
         // 年賀状番号
-        ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(295283,262358,242359));
+        ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(295283,267358,242359));
         for(int i = 0; i < newYearCards.size(); i++){
             if(winningNumber == newYearCards.get(i)){
                 System.out.println("一等賞");
