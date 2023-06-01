@@ -5,8 +5,12 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // input
-        // 当選番号
+        System.out.println("一等賞：242358");
+        System.out.println("±１で前後賞");
+        System.out.println("下4桁一致2358で二等賞");
+        System.out.println("下3桁一致358で三等賞");
+        System.out.println();
+        //winningNumberArrayListの値を分割してArrayListに格納
         int winningNumber = 242358;
         ArrayList<Integer> winningNumberArrayList = new ArrayList<>();
         String winning = Integer.toString(winningNumber);
@@ -15,114 +19,70 @@ public class Main {
             int num = Integer.parseInt(nString);
             winningNumberArrayList.add(num);
         }
-        // ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(295283, 267358, 242359));
-
-        // 年賀状番号
-        ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(214258, 267358, 242359));
+        // 年賀状番号を指定する。
+        ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(295283,267358,242359));
+        //乱数を生成
+        Integer numbers = (int)(Math.random() * 3);
+        //newYearCardsのArrayListから取得した要素をgetNewYearCardsのArrayListに分割してから格納
         ArrayList<Integer> getNewYearCards = new ArrayList<>();
-        String newYear = Integer.toString(newYearCards.get(0));
+        String newYear = Integer.toString(newYearCards.get(numbers));//生成した乱数を取得し、newYearCardsのArrayListに格納された要素を指定し、取得。
         String[] newStr = newYear.split("");
+        String numberGet = "";
         for (String yString : newStr) {
             int num = Integer.parseInt(yString);
             getNewYearCards.add(num);
+            numberGet += yString;
         }
-        
-        // 一等
-        // 数値として比較
-        /* 当選番号と一致する番号 */
-        // if (newYearCards.get(i) == 242358){
-        //     System.out.println("一等賞");
-        //     break;
-        // }
-
-        // 前後賞
-        // 数値として比較
-        // 当選番号+1と同じ場合
-        /* 当選番号の ±1 の番号（当選番号が 200000 または 299999 の場合，前後賞は一つしかありません） */
-        // if (newYearCards.get(i) == 242359){
-        //     System.out.println("前後賞");
-        // }
-        // 当選番号-1と同じ場合
-        /* 当選番号の ±1 の番号（当選番号が 200000 または 299999 の場合，前後賞は一つしかありません） */
-        // if (newYearCards.get(i) == 242357){
-        //     System.out.println("前後賞");
-        // }
-
-        // 二等
-        /* 当選番号と下 4 桁が一致する番号（1等に該当する番号を除く） */
-        // if (false >= 0){
-        //     System.out.println("二等賞");
-        // }
-
-        // 三等
-        /* 当選番号と下 3 桁が一致する番号（1等および2等に該当する番号を除く） */
-        // if (false > 1){
-        //     System.out.println("三等賞");
-        // }
-
-        // 外れ
+        System.out.print(numberGet + "：");
+        //一等賞が出た場合、前後賞が出た場合、外れが出た場合の条件分岐
         int trueCount = 0;
         int falseCount = 0;
         for (int i = 0; i < winningNumberArrayList.size(); i++) {
-            // System.out.println(winningNumberArrayList.get(i));
-            // System.out.println(getNewYearCards.get(i));
             if (getNewYearCards.get(i) == winningNumberArrayList.get(i)) {
-                ++trueCount;
+                trueCount++;
                 if(trueCount > 5 && falseCount <= 0){
                     System.out.println("一等賞");
-                    break;
-                }if(trueCount > 2 && falseCount <= 3){
-                    System.out.println("三等賞");
+                    System.exit(0);
                 }
-                
             } else {
-                ++falseCount;
+                falseCount++;
                 if(trueCount >= 5){
                     if(getNewYearCards.get(i) == 7){
                         System.out.println("前後賞");
-                        break;
+                        System.exit(0);
                     }else if(getNewYearCards.get(i) == 9){
                         System.out.println("前後賞");
-                        break;
+                        System.exit(0);
                     }else{
                         System.out.println("外れ");
-                        break;
+                        System.exit(0);
                     }   
                 }else if(trueCount > 1){
                     System.out.println("外れ");
-                    break;
-                }else if(trueCount > 2){
-                    System.out.println("三等賞");
-                } 
-                
+                    System.exit(0);
+                }else if(falseCount > 2){
+                    System.out.println("外れ");
+                    System.exit(0);
+                }
             }
         }
-
-        // ArrayList<Integer> getNewYearCards1 = new ArrayList<>();
-        // String newYear1 = Integer.toString(newYearCards.get(1));
-        // String[] newString1 = newYear1.split("");
-        // for (String yString1 : newString1) {
-        // int num = Integer.parseInt(yString1);
-        // getNewYearCards1.add(num);
-        // }
-        // for (int i = wStrings.length - 1; i >= 0; i--) {
-        // if (getNewYearCards.get(i) == getNewYearCards1.get(i)) {
-        // System.out.println(true);
-        // } else {
-        // ++j;
-        // if (j >= 0) {
-        // System.out.println("外れ");
-        // break;
-        // }
-
-        // }
-        // }
-
-         /* 
-         * 想定結果
-         * 外れ
-         * 3等章
-         * 前後賞
-         */
+        //外れでも一等賞でも前後賞でもない場合に二等賞と三等賞のどちらかを判定
+        int falseCount1 = 0;
+        int trueCount1 = 0;
+        for(int i = winningNumberArrayList.size()-1; i >= 0; i--){
+            if(getNewYearCards.get(i) == winningNumberArrayList.get(i)){
+                trueCount1++;
+                if(trueCount1 == 5 && falseCount1 == 1){
+                    System.out.println("二等賞");
+                    System.exit(0);
+                }
+            }else{
+                falseCount1++;
+                if(falseCount1 == 2){
+                    System.out.println("三等賞");
+                    System.exit(0);;
+                }
+            }
+        }
     }
 }
