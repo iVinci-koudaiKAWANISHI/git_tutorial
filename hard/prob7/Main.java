@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int winningNumber = 999999;
+        int winningNumber = 999990;
         ArrayList<Integer> newYearCards = new ArrayList<>(Arrays.asList(1000000, 267358, 242359));
         int last4Wining = winningNumber % 10000;
         int last3Wining = winningNumber % 1000;
